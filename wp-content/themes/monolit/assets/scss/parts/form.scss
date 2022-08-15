@@ -1,0 +1,89 @@
+.contact-form {
+    margin: 50px 0;
+
+    .wpforms-form {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
+
+.contact-form-title {
+    text-align: center;
+}
+
+.wpforms-form {
+    input {
+        width: 100% !important;
+        outline: none !important;
+        border: none !important;
+        color: #a5a5a5 !important;
+        padding: 15px 20px !important;
+        appearance: none !important;
+        border-radius: 12px !important;
+        background-color: #f2f2f2 !important;
+        height: 55px !important;
+
+        &::placeholder {
+            color: #a5a5a5 !important;
+        }
+
+        &[type=tel] {
+            padding-left: 55px !important;
+        }
+    }
+
+    textarea {
+        resize: none !important;
+        height: 150px !important;
+        background-color: #f2f2f2 !important;
+        outline: none !important;
+        border: none !important;
+        color: #a5a5a5 !important;
+        padding: 15px 20px !important;
+        appearance: none !important;
+        border-radius: 12px !important;
+    }
+
+    .wpforms-submit-container {
+        text-align: center;
+    }
+
+    .wpforms-submit {
+        background: rgb(7,96,167) !important;
+        background: linear-gradient(61deg, rgba(7,96,167,1) 36%, rgba(22,161,238,1) 100%) !important;
+        color: #fff !important;
+        border-radius: 12px !important;
+        border: none !important;
+        padding: 15px 25px !important;
+        font-weight: 600 !important;
+        transition: background ease-in-out 1s !important;
+        position: relative !important;
+        z-index: 1 !important;
+
+        &:after {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgb(7,96,167);
+            transition: opacity 0.5s ease-out;
+            z-index: -1;
+            opacity: 0;
+            border-radius: 12px !important;
+        }
+
+
+        &:hover {
+            &:after {
+                opacity: 1;
+            }
+        }
+    }
+
+    .wpforms-error {
+        margin: 3px 0 !important;
+        opacity: 0.7 !important;
+    }
+}

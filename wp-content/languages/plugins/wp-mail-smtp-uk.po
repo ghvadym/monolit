@@ -1,0 +1,68 @@
+# Translation of Plugins - WP Mail SMTP by WPForms &#8211; The Most Popular SMTP and Email Log Plugin - Stable (latest release) in Ukrainian
+# This file is distributed under the same license as the Plugins - WP Mail SMTP by WPForms &#8211; The Most Popular SMTP and Email Log Plugin - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2016-10-16 16:47:56+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);\n"
+"X-Generator: GlotPress/4.0.0-alpha.1\n"
+"Language: uk_UA\n"
+"Project-Id-Version: Plugins - WP Mail SMTP by WPForms &#8211; The Most Popular SMTP and Email Log Plugin - Stable (latest release)\n"
+
+#: src/Admin/Area.php:252 src/Admin/Area.php:253 src/Admin/Area.php:1191
+msgid "Settings"
+msgstr "Налаштування"
+
+#: src/Admin/DashboardWidget.php:452
+msgid "Save Changes"
+msgstr "Зберегти зміни"
+
+#: assets/languages/wp-mail-smtp-vue.php:177 src/Admin/Pages/TestTab.php:230
+#: src/SiteHealth.php:327
+msgid "Send a Test Email"
+msgstr "Відправити тестовий лист"
+
+#: assets/languages/wp-mail-smtp-vue.php:406
+#: src/Providers/OptionsAbstract.php:288
+msgid "Authentication"
+msgstr "Авторизація"
+
+#: assets/languages/wp-mail-smtp-vue.php:391
+#: src/Providers/OptionsAbstract.php:212
+msgid "Encryption"
+msgstr "Шифрування"
+
+#: assets/languages/wp-mail-smtp-vue.php:394
+#: src/Providers/OptionsAbstract.php:252
+msgid "SMTP Port"
+msgstr "SMTP порт"
+
+#: assets/languages/wp-mail-smtp-vue.php:388
+#: src/Providers/OptionsAbstract.php:198
+msgid "SMTP Host"
+msgstr "SMTP сервер"
+
+#: src/Admin/Pages/SettingsTab.php:245
+msgid "Set the return-path to match the From Email"
+msgstr "Встановити адресу повернення на адресу \"Від\""
+
+#: src/Admin/Pages/SettingsTab.php:236
+msgid "Return Path"
+msgstr "Адреса повернення (return-path)"
+
+#: assets/languages/wp-mail-smtp-vue.php:499 src/Admin/Pages/ExportTab.php:135
+#: src/Admin/Pages/SettingsTab.php:258
+msgid "Mailer"
+msgstr "Метод відправки пошти"
+
+#: assets/languages/wp-mail-smtp-vue.php:210 src/Admin/Pages/ExportTab.php:121
+#: src/Admin/Pages/SettingsTab.php:191
+msgid "From Name"
+msgstr "Від імені"
+
+#: assets/languages/wp-mail-smtp-vue.php:216
+#: src/Admin/Pages/SettingsTab.php:121
+msgid "From Email"
+msgstr "Від (адреса)"
