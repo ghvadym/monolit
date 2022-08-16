@@ -346,91 +346,90 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Search
 
-    function debounce(func, timeout = 1000) {
-        let timer;
-        return (...args) => {
-            clearTimeout(timer);
-            timer = setTimeout(() => { func.apply(this, args); }, timeout);
-        };
-    }
-
-    function emptyData(context) {
-        let div = document.createElement("div");
-        div.className = 'search-form_empty';
-        div.innerHTML = 'Empty';
-        context.appendChild(div);
-    };
-
-    function saveInput(value, context) {
-        context.innerHTML = "";
-        $.ajax({
-            type: "GET",
-            url: "/realtime_search",
-            data: { query: value },
-            success: (response = []) => {
-                if (response) {
-                    const data = JSON.parse(response);
-                    if (data.length > 0) {
-                        data.map((item = {}) => {
-                            const { title = '', url = '#' } = item;
-                            let a = document.createElement("a");
-                            a.className = 'search-form_data';
-                            a.innerHTML = `${title}`;
-                            a.setAttribute("href", `${url}`);
-                            context.appendChild(a);
-                        })
-                    } else {
-                        emptyData(context)
-                    }
-                }
-            },
-            error: xhr => {
-                console.error(xhr.status);
-                emptyData(context);
-            }
-        });
-    }
-
-    const processChange = debounce((value, context) => saveInput(value, context), 500);
-
-    document.querySelector('.search-form').addEventListener('input', event => {
-        const search_result_flex = document.querySelector('.search_result_flex');
-        const search_result = document.querySelectorAll('.search_result');
-        if (event.target.value == '') {
-            search_result_flex.classList.remove("active");
-            search_result[0].innerHTML = "";
-        } else {
-            search_result_flex.classList.add("active");
-            search_result[0].innerHTML = "";
-            processChange(event.target.value, search_result[0])
-        }
-    });
-
-    document.addEventListener('click', event => {
-        const search_result_flex = document.querySelector('.search_result_flex');
-        if (event.target.className == 'search-form_input') {
-            search_result_flex.classList.add("active");
-        } else {
-            search_result_flex.classList.remove("active");
-        }
-    });
-
-    let searchIcon = document.querySelector('.search_icon');
-    if (searchIcon) {
-        searchIcon.addEventListener('click', () => {
-            document.querySelector('.search_icon_open').classList.toggle('active');
-            document.querySelector('.search_icon_close').classList.toggle('active');
-            document.querySelector('.search_flex').classList.toggle('active');
-            document.querySelector('.triangle').classList.toggle('active');
-        })
-    }
+    // function debounce(func, timeout = 1000) {
+    //     let timer;
+    //     return (...args) => {
+    //         clearTimeout(timer);
+    //         timer = setTimeout(() => { func.apply(this, args); }, timeout);
+    //     };
+    // }
+    //
+    // function emptyData(context) {
+    //     let div = document.createElement("div");
+    //     div.className = 'search-form_empty';
+    //     div.innerHTML = 'Empty';
+    //     context.appendChild(div);
+    // }
+    //
+    // function saveInput(value, context) {
+    //     context.innerHTML = "";
+    //     $.ajax({
+    //         type: "GET",
+    //         url: "/realtime_search",
+    //         data: { query: value },
+    //         success: (response = []) => {
+    //             if (response) {
+    //                 const data = JSON.parse(response);
+    //                 if (data.length > 0) {
+    //                     data.map((item = {}) => {
+    //                         const { title = '', url = '#' } = item;
+    //                         let a = document.createElement("a");
+    //                         a.className = 'search-form_data';
+    //                         a.innerHTML = `${title}`;
+    //                         a.setAttribute("href", `${url}`);
+    //                         context.appendChild(a);
+    //                     })
+    //                 } else {
+    //                     emptyData(context)
+    //                 }
+    //             }
+    //         },
+    //         error: xhr => {
+    //             console.error(xhr.status);
+    //             emptyData(context);
+    //         }
+    //     });
+    // }
+    //
+    // const processChange = debounce((value, context) => saveInput(value, context), 500);
+    //
+    // document.querySelector('.search-form').addEventListener('input', event => {
+    //     const search_result_flex = document.querySelector('.search_result_flex');
+    //     const search_result = document.querySelectorAll('.search_result');
+    //     if (event.target.value == '') {
+    //         search_result_flex.classList.remove("active");
+    //         search_result[0].innerHTML = "";
+    //     } else {
+    //         search_result_flex.classList.add("active");
+    //         search_result[0].innerHTML = "";
+    //         processChange(event.target.value, search_result[0])
+    //     }
+    // });
+    //
+    // document.addEventListener('click', event => {
+    //     const search_result_flex = document.querySelector('.search_result_flex');
+    //     if (event.target.className == 'search-form_input') {
+    //         search_result_flex.classList.add("active");
+    //     } else {
+    //         search_result_flex.classList.remove("active");
+    //     }
+    // });
+    //
+    // let searchIcon = document.querySelector('.search_icon');
+    // if (searchIcon) {
+    //     searchIcon.addEventListener('click', () => {
+    //         document.querySelector('.search_icon_open').classList.toggle('active');
+    //         document.querySelector('.search_icon_close').classList.toggle('active');
+    //         document.querySelector('.search_flex').classList.toggle('active');
+    //         document.querySelector('.triangle').classList.toggle('active');
+    //     })
+    // }
 
     // END
 
     let overflow = document.querySelector('.overflow');
     if (overflow) {
         overflow.addEventListener('click', function () {
-            console.log(123123121233)
             document.querySelector('.mobile_bth').classList.remove('active');
             document.querySelector('.primary-menu-container').classList.remove('active');
             document.querySelector('.overflow').classList.remove('active');
@@ -442,18 +441,18 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    $.ajax({
-        type: "GET",
-        async: false,
-        url: "/main_page_fq",
-        success: function (data) {
-            $(".asking").html(data);
-        },
-        error: function (xhr) {
-            console.error(xhr.status);
-        },
-        dataType: "html",
-    });
+    // $.ajax({
+    //     type: "GET",
+    //     async: false,
+    //     url: "/main_page_fq",
+    //     success: function (data) {
+    //         $(".asking").html(data);
+    //     },
+    //     error: function (xhr) {
+    //
+    //     },
+    //     dataType: "html",
+    // });
 
 
     $('.asking_item').on('click', function () {

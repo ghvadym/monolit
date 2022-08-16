@@ -53,7 +53,6 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
         }
 
-        console.log(searchResult)
         searchResult.innerHTML = html.result;
     }
 });

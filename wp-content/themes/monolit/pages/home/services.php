@@ -17,7 +17,7 @@ if (empty($services)) {
                     <ul class="servises_list">
                         <?php get_template_part_var('pages/parts/taxonomy-posts', ['term' => $service]); ?>
                     </ul>
-                    <a href="" class="servises_button">
+                    <a href="<?php echo get_term_link($service); ?>" class="servises_button">
                         <?php _e('Перейти', 'monolit'); ?>
                     </a>
                 </div>

@@ -26,8 +26,8 @@ function theme_styles()
 function theme_scripts()
 {
     wp_enqueue_script('monolit-slider-script', get_template_directory_uri() . '/assets/js/slick-slider.js', ['jquery'], time(), true);
-    wp_enqueue_script('monolit-script', get_template_directory_uri() . '/assets/js/scripts.js', ['jquery'], time(), true);
     wp_enqueue_script('monolit-main-script', get_template_directory_uri() . '/assets/js/app.js', ['jquery'], time(), true);
+    wp_enqueue_script('monolit-script', get_template_directory_uri() . '/assets/js/scripts.js', ['jquery'], time(), true);
     wp_enqueue_script('monolit-jquery-script', get_template_directory_uri() . '/assets/js/jquery.js', ['jquery'], time(), true);
 
     wp_localize_script('monolit-main-script', 'myajax', [
