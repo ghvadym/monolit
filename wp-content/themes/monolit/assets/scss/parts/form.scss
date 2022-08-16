@@ -49,7 +49,7 @@
     }
 
     .wpforms-submit {
-        background: rgb(7,96,167) !important;
+        background: rgba(22,161,238,1) !important;
         background: linear-gradient(61deg, rgba(7,96,167,1) 36%, rgba(22,161,238,1) 100%) !important;
         color: #fff !important;
         border-radius: 12px !important;
@@ -67,7 +67,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgb(7,96,167);
+            background: rgba(22,161,238,1);
             transition: opacity 0.5s ease-out;
             z-index: -1;
             opacity: 0;

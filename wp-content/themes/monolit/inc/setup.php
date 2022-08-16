@@ -50,7 +50,7 @@ function theme_setup_settings()
         'our_company'  => 'Our Company',
     ]);
 
-    add_theme_support('post-thumbnails', ['articles']);
+    add_theme_support('post-thumbnails', ['articles', 'page']);
     add_theme_support('custom-logo', [
         'unlink-homepage-logo' => true,
     ]);

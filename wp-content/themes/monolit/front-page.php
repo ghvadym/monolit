@@ -3,9 +3,6 @@
  * Template name: Головна
  */
 get_header();
-$post = get_post();
-$fields = get_fields($post->ID);
-$options = get_fields('options');
 
 $services = get_terms([
     'taxonomy'   => 'services_categories',

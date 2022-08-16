@@ -1371,7 +1371,6 @@ img {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url(https://monolit.company/static/img/main_screen_background.png);
     padding-top: 120px;
     padding-bottom: 160px
 }
@@ -1417,6 +1416,12 @@ img {
     flex-direction: column
 }
 
+@media (min-width: 941px) {
+    .block_about_left {
+        margin-right: 30px;
+    }
+}
+
 .block_about_history {
     margin: 0;
     max-width: 245px;
@@ -1444,7 +1449,7 @@ img {
     font-size: 36px;
     line-height: 42px;
     color: #000;
-    margin: 0
+    margin: 0 0 50px;
 }
 
 .block_about_right {
@@ -1481,17 +1486,22 @@ img {
 }
 
 .block_about_photo_container {
-    max-width: 770px;
+    max-width: 100%;
     width: 100%;
-    height: 400px;
-    position: absolute;
-    bottom: -355px;
-    left: 50%;
-    transform: translate(-50%)
+}
+
+@media (max-width: 940px) {
+    .block_about_photo_container {
+        margin-bottom: 30px;
+    }
+}
+
+.block_about_photo_container img {
+    object-fit: contain;
 }
 
 .our_values {
-    padding-top: 300px;
+    padding-top: 100px;
     max-width: 1170px;
     width: 100%;
     margin: 0 auto
@@ -1621,7 +1631,7 @@ img {
     padding: 100px 0
 }
 
-.title_container.partners .title_line, .title_container.certif .title_line {
+.our_mission .title_line, .title_container.certif .title_line {
     max-width: 420px;
     width: 100%
 }
@@ -2752,7 +2762,7 @@ tr {
         transition: .4s
     }
 
-    .title_container.partners .title_line {
+    .our_mission .title_line {
         max-width: 300px
     }
 }
@@ -3321,7 +3331,6 @@ tr {
         transform: translate(0);
         margin-left: auto;
         margin-right: auto;
-        height: 300px
     }
 
     .about_us_title {
@@ -3382,7 +3391,7 @@ tr {
         margin-right: 30px
     }
 
-    .title_container.partners .title_line, .title_container.certif .title_line {
+    ю, .title_container.certif .title_line {
         max-width: 150px
     }
 
@@ -3683,7 +3692,7 @@ tr {
         padding-right: 20px
     }
 
-    .title_container.partners .title_line, .title_container.certif .title_line {
+    .our_mission .title_line, .title_container.certif .title_line {
         max-width: 70px
     }
 
@@ -3725,7 +3734,7 @@ tr {
         width: 101vw
     }
 
-    .title_container.partners .title_line,
+    .our_mission .title_line,
     .title_container.certif .title_line,
     .title_line {
         width: 32px
@@ -3890,10 +3899,6 @@ tr {
     .block_about_info {
         font-size: 18px;
         line-height: 26px
-    }
-
-    .block_about_photo_container {
-        height: 280px
     }
 
     .our_values_title {
@@ -4153,10 +4158,6 @@ tr {
 
     .photo_galery_item img {
         max-height: 200px
-    }
-
-    .block_about_photo_container {
-        height: 200px
     }
 
     .our_services_title {

@@ -37,6 +37,8 @@ $phone = get_field('phone', 'options');
         <div class="mobile_bth">
             <span class="button_line"></span>
         </div>
+
+        <?php do_action('wpml_add_language_selector'); ?>
     </nav>
     <div class="search_flex">
         <form action="<?php bloginfo('url'); ?>/search/" method="GET" class="search-form">
